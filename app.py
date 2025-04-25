@@ -157,7 +157,6 @@ st.markdown("""
 st.markdown('<p class="title">Spam or Ham Prediction</p>', unsafe_allow_html=True)
 
 
-
 # Container to hold the input and prediction button
 with st.container():
     # Text input for the user message
