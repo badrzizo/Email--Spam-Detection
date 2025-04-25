@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spam or Ham Predictor</title>
+</head>
+<body>
+    <h1>Spam or Ham Message Predictor</h1>
+    <form action="/predict" method="post">
+        <label for="message">Enter a message:</label><br>
+        <textarea id="message" name="message" rows="4" cols="50"></textarea><br><br>
+        
+        <label for="model">Choose a model:</label><br>
+        <select id="model" name="model">
+            <option value="Logistic Regression">Logistic Regression</option>
+            <option value="Naive Bayes">Naive Bayes</option>
+            <option value="Support Vector Machine">Support Vector Machine</option>
+        </select><br><br>
+        
+        <input type="submit" value="Predict"><br><br>
+    </form>
+
+    {% if prediction %}
+        <h3>Prediction: {{ prediction }}</h3>
+        <p>Message: {{ message }}</p>
+        <p>Model Used: {{ model }}</p>
+    {% endif %}
+</body>
+</html>
